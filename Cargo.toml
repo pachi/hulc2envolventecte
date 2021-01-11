@@ -17,7 +17,7 @@ flate2 = "1"
 glob = "0.3"
 log = "0.4"
 md5 = "0.7.0"
-roxmltree = "0.13"
+roxmltree = "0.14"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 
@@ -26,7 +26,7 @@ env_logger = "0.8"
 
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3", features = ["wingdi", "winuser", "libloaderapi", "combaseapi", "objbase", "shobjidl", "shlobj", "winerror"] }
-log4rs = { version = "0.13.0", features =["file_appender"] }
+log4rs = { version = "1.0.0", features =["file_appender"] }
 
 [dev-dependencies]
 criterion = "0.3"
