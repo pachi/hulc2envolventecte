@@ -104,7 +104,7 @@ pub fn parse<T: AsRef<Path>>(path: T) -> Result<CtehexmlData, Error> {
     let utf8buf = read_file(path.as_ref())?;
 
     // Localiza datos en XML
-    let doc = roxmltree::Document::parse(&utf8buf)?;
+    let doc = roxmltree::Document::parse(&utf8buf).map_err(Error::msg)?;
 
     // Datos generales
     let datos_generales = doc
